@@ -419,7 +419,7 @@ const Predictor = {
         view.updateNextActions();
 		
         console.log(towns[0].totalActionList[1].manaCost())
-        document.querySelector("#nextActionsList").style["cssText"] += " overflow: visible!important"
+        //document.querySelector("#nextActionsList").style["cssText"] += " overflow: visible!important"
 	}
 }
 
