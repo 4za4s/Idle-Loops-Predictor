@@ -112,7 +112,7 @@ const Predictor = {
 						}
 						if(pAction.name == "Smash Pots"){
 							pAction[tAction.varName] = {}
-							rewardFinish(tAction.varName, 10, goldCostSmashPots())
+							rewardFinish(tAction.varName, 10, actionsWithGoldCost[0].goldCost())
 							pAction[tAction.varName][tAction.varName + " to check"] = pTown[pCurTown]["total" + tAction.varName] - pTown[pCurTown]["checked" + tAction.varName]
 							pAction[tAction.varName][tAction.varName + " with mana"] = Math.floor(pTown[pCurTown]["checked" + tAction.varName]/10)
 							pAction[tAction.varName][tAction.varName + " left"] = pTown[pCurTown]["good" + tAction.varName]
@@ -121,7 +121,7 @@ const Predictor = {
 						}
 						if (pAction.name === "Pick Locks") {
 							pAction[tAction.varName] = {}
-							rewardFinish(tAction.varName, 10, goldCostLocks())
+							rewardFinish(tAction.varName, 10, actionsWithGoldCost[1].goldCost())
 							pAction[tAction.varName][tAction.varName + " to check"] = pTown[pCurTown]["total" + tAction.varName] - pTown[pCurTown]["checked" + tAction.varName]
 							pAction[tAction.varName][tAction.varName + " with mana"] = Math.floor(pTown[pCurTown]["checked" + tAction.varName]/10)
 							pAction[tAction.varName][tAction.varName + " left"] = pTown[pCurTown]["good" + tAction.varName]
@@ -143,7 +143,7 @@ const Predictor = {
 						}
 						if (pAction.name === "Short Quest") {
 							pAction[tAction.varName] = {}
-							rewardFinish(tAction.varName, 5, goldCostSQuests())
+							rewardFinish(tAction.varName, 5, actionsWithGoldCost[2].goldCost())
 							pAction[tAction.varName][tAction.varName + " to check"] = pTown[pCurTown]["total" + tAction.varName] - pTown[pCurTown]["checked" + tAction.varName]
 							pAction[tAction.varName][tAction.varName + " with mana"] = Math.floor(pTown[pCurTown]["checked" + tAction.varName]/10)
 							pAction[tAction.varName][tAction.varName + " left"] = pTown[pCurTown]["good" + tAction.varName]
@@ -154,7 +154,7 @@ const Predictor = {
 						}
 						if (pAction.name === "Long Quest") {
 							pAction[tAction.varName] = {}
-							rewardFinish(tAction.varName, 5, goldCostLQuests())
+							rewardFinish(tAction.varName, 5, actionsWithGoldCost[3].goldCost())
 							pAction[tAction.varName][tAction.varName + " to check"] = pTown[pCurTown]["total" + tAction.varName] - pTown[pCurTown]["checked" + tAction.varName]
 							pAction[tAction.varName][tAction.varName + " with mana"] = Math.floor(pTown[pCurTown]["checked" + tAction.varName]/10)
 							pAction[tAction.varName][tAction.varName + " left"] = pTown[pCurTown]["good" + tAction.varName]
@@ -196,7 +196,7 @@ const Predictor = {
 						}
 						if (pAction.name === "Wild Mana") {
 							pAction[tAction.varName] = {}
-							rewardFinish(tAction.varName, 10, goldCostWildMana())
+							rewardFinish(tAction.varName, 10, actionsWithGoldCost[4].goldCost())
 							pAction[tAction.varName][tAction.varName + " to check"] = pTown[pCurTown]["total" + tAction.varName] - pTown[pCurTown]["checked" + tAction.varName]
 							pAction[tAction.varName][tAction.varName + " with mana"] = Math.floor(pTown[pCurTown]["checked" + tAction.varName]/10)
 							pAction[tAction.varName][tAction.varName + " left"] = pTown[pCurTown]["good" + tAction.varName]
